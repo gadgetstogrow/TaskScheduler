@@ -1,29 +1,29 @@
 /**********************************************************************************
- *	Project:	Arduino_Task_Scheduler.ino, Copyright © 2019, Kevin Gagnon
+ *	Project:	Arduino_Task_Scheduler.ino, Copyright 2019, Kevin Gagnon
  *  Contact:	Kevin Gagnon @GadgetsToGrow
- *  URL:		https://www.hackster.io/GadgetsToGrow
- *  Date:		3-17-2019
+ *  URL:  		https://www.hackster.io/GadgetsToGrow
+ *  Date: 		3-17-2019
  *	Credit:		Based on Alan Burlison's Task Scheduler Library
- *				The following is Copyright © Alan Burlison, 2011
- *  			Original Source Code:	http://bleaklow.com/files/2010/Task.tar.gz
- *				Original Reference:		http://bleaklow.com/2010/07/20/a_very_simple_arduino_task_manager.html
+ *				    The following is Copyright ï¿½ Alan Burlison, 2011
+ *  			    Original Source Code:	http://bleaklow.com/files/2010/Task.tar.gz
+ *				    Original Reference:		http://bleaklow.com/2010/07/20/a_very_simple_arduino_task_manager.html
  *  Purpose:	Evaluate simple task scheduling on the Arduino Uno. This example covers
- *				the following types of tasks:
+ *				    the following types of tasks:
  *
- *				- Task				- Runs repeatedly
- *				- Timed Task		- Runs at a specified rate (100ms, 1000ms, etc.)
- *				- TriggeredTask		- Runs when triggered by an external source
+ *				    - Task				- Runs repeatedly
+ *				    - Timed Task		- Runs at a specified rate (100ms, 1000ms, etc.)
+ *				    - TriggeredTask		- Runs when triggered by an external source
  *
  *
- *				This code can be modified (pins mostly) to work with ATTiny devices 
- *				but without the Debugger class (ATTiny doesn't have a UART). Future 
- *				examples will demonstrate.
+ *				    This code can be modified (pins mostly) to work with ATTiny devices 
+ *				    but without the Debugger class (ATTiny doesn't have a UART). Future 
+ *				    examples will demonstrate.
  *				
  *  Source:		Download latest code from:
- *				URL: https://github.com/gadgetstogrow/Arduino-Task-Scheduler/tree/master/Arduino%20Uno
+ *				    URL: https://github.com/gadgetstogrow/Arduino-Task-Scheduler/tree/master/Arduino%20Uno
  *
- *				Read description/tutorial at hackster.io:
- *				URL: https://www.hackster.io/GadgetsToGrow
+ *				    Read description/tutorial at hackster.io:
+ *				    URL: https://www.hackster.io/GadgetsToGrow
  *	
  *	Pinout Arduino Uno:
  *				PIN		PURPOSE										TASK TYPE
@@ -41,7 +41,7 @@
 // *** Used with Atmel Studio 
 // *** (comment out if using Arduino IDE)
 // ***
-#include <Arduino.h>
+//#include <Arduino.h>
 
 // ***
 // *** Include Task Scheduler library 
