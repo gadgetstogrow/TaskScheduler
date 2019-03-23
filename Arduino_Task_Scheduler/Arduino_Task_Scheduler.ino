@@ -19,22 +19,21 @@
  *          but without the Debugger class (ATTiny doesn't have a UART). Future 
  *          examples will demonstrate.
  *
- *Source:   Download latest code from:
- *URL:      https://github.com/gadgetstogrow/Arduino-Task-Scheduler/tree/master/Arduino%20Uno
+ *Source:	https://github.com/gadgetstogrow/TaskScheduler
  *
- *          Read description/tutorial at hackster.io:
- *          URL: https://www.hackster.io/GadgetsToGrow
+ *
+ *Tutorial:	https://www.hackster.io/GadgetsToGrow/don-t-delay-use-an-arduino-task-scheduler-today-215cfe
  *	
  *Pinout Arduino Uno:
- *				PIN		  PURPOSE										TASK TYPE
- *				--------------------------------------------------------------------
- *				A0:		  Photocell Light Sensor				-Timed Task
- *				Pin 3:	Fader LED (PWM)								-Timed Task
- *				Pin 4:	Light Level Threshold Alarm		-Triggered Task
- *				Pin 5:	Light Level OK								-Triggered Task
- *				Pin 13:	Blink built-in LED						-Timed Task
+ *			PIN		  PURPOSE									TASK TYPE
+ *			--------------------------------------------------------------------
+ *			A0:			Photocell Light Sensor					-Timed Task
+ *			Pin 3:		Fader LED (PWM)							-Timed Task
+ *			Pin 4:		Light Level Threshold Alarm				-Triggered Task
+ *			Pin 5:		Light Level OK							-Triggered Task
+ *			Pin 13:		Blink built-in LED						-Timed Task
  *
- *				*USB:	TX/RX Debugger data to Serial Monitor		-Task 	
+ *			USB Port:	TX/RX Debugger data to Serial Monitor	-Task 	
  **********************************************************************************/
 
 // ***
@@ -63,14 +62,14 @@
 // *** Timed Task intervals 
 // ***
 #define RATE_PHOTOCELL_READING	3000	//Read Photocell	- Timed Task
-#define RATE_BLINKER_BLINK		500		//Blink LED_BLINKER - Timed Task
+#define RATE_BLINKER_BLINK		500		//Blink LED_BLINKER	- Timed Task
 #define RATE_FADER_FADE			50		//Fade LED_FADER	- Timed Task
 
 // ***
 // *** Utility defines
 // ***
-#define INCREMENT_FADER_STEP			5		//Value used to increment/decrement LED_FADER
-#define LIGHT_LEVEL_LOWER_THRESHOLD		300		//Value used to determine if LightLevelAlarm is triggered
+#define INCREMENT_FADER_STEP			5	//Value used to increment/decrement LED_FADER
+#define LIGHT_LEVEL_LOWER_THRESHOLD		300	//Value used to determine if LightLevelAlarm is triggered
 
 
 /*****************************************************************************************
