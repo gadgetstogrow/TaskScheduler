@@ -105,6 +105,7 @@ public:
 protected:
     
     uint32_t runTime;   // The  system clock tick when the task can next run.
+    uint32_t lastRunTime;   // The  system clock tick when the task last ran.
 };
 
 #endif
