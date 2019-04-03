@@ -36,29 +36,29 @@
  
  The code included with this project uses the following Tasks:
  
-		Debugger (Conditional)		Task		-	Provides debug info to Serial Monitor.
-		Blinker						TimedTask 	- 	Blink an LED on pin 6
-		ArcReactor (don't laugh!)	TimedTask 	- 	LED on pin 5 that pulses/fades (Iron Man style) 
+ Debugger (Conditional)		Task		-	Provides debug info to Serial Monitor.
+ Blinker			TimedTask 	- 	Blink an LED on pin 6
+ ArcReactor (don't laugh!)	TimedTask 	- 	LED on pin 5 that pulses/fades (Iron Man style) 
 		
-		AppManager 					TimedTask 	- 	Main Switchboard for the application. Runs at a rate
-													of 100ms to read a volatile variable (ledCycleCount)
-													set by ISR(PCINT2_vect) an interrupt activated by a 
-													switch attached to pin 3 (pulled up). The AppManager
-													decrements the ledCycleCount until it reaches zero
-													(no activity on switch), when this occurs, the AppManager
-													disables a few peripherals (more can be done later),
-													disables pin outputs, then finally puts the Arduino to
-													sleep until the next interrupt increments the ledCycleCount.
+ AppManager 			TimedTask 	- 	Main Switchboard for the application. Runs at a rate
+							of 100ms to read a volatile variable (ledCycleCount)
+							set by ISR(PCINT2_vect) an interrupt activated by a 
+							switch attached to pin 3 (pulled up). The AppManager
+							decrements the ledCycleCount until it reaches zero
+							(no activity on switch), when this occurs, the AppManager
+							disables a few peripherals (more can be done later),
+							disables pin outputs, then finally puts the Arduino to
+							sleep until the next interrupt increments the ledCycleCount.
 													
  Other files in the project:
 
-		Config.h									Pin numbers, timing config, etc.
-		Task.h										...
-		Task.cpp									...
-		TaskScheduler.h								...
-		TaskScheduler.cpp							...
+		Config.h					Pin numbers, timing config, etc.
+		Task.h						...
+		Task.cpp					...
+		TaskScheduler.h					...
+		TaskScheduler.cpp				...
 		Arduino_TaskScheduler_with_Sleep.ino		Arduino IDE code
-		
+		Fritzing Wiring Diagram in Fritzing Foler	Schematic
  
  Power Measurement Results with minimal power reduction in SLEEP_MODE_PWR_DOWN:
  
@@ -67,6 +67,8 @@
 		
 		(Not bad, but there is more that could be done. My final project will be ATTiny85 based and I plan to get
 		down to uA range without much trouble.)
+
+
 		
 Any Comments, Suggestions or Questions are welcome.
 
