@@ -12,5 +12,9 @@ bool TriggeredTask::canRun(uint32_t now) {
 
 // Virtual.
 bool TimedTask::canRun(uint32_t now) {
-    return now >= runTime;
+    if (now - runTime > intervalTime) {
+        runTime = now;
+        return true;
+    }
+    else return false;
 }

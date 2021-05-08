@@ -188,7 +188,7 @@ private:
 // *** Blinker Constructor
 // ***
 Blinker::Blinker(uint8_t _pin, uint32_t _rate, Debugger *_ptrDebugger)
-	: TimedTask(millis()),
+	: TimedTask(millis(), RATE_BLINKER_BLINK),
 	pin(_pin),
 	rate(_rate),
 	on(false),
@@ -215,7 +215,7 @@ void Blinker::run(uint32_t now)
 		ptrDebugger->debugWrite("BLINKER: ON");
 	}
 	// Run again in the specified number of milliseconds.
-	incRunTime(rate);
+	setIntervalTime(rate);
 }
 
 /*****************************************************************************************
@@ -251,7 +251,7 @@ private:
 // *** Fader Constructor
 // ***
 Fader::Fader(uint8_t _pin, uint8_t _increment, uint32_t _rate, Debugger *_ptrDebugger)
-	: TimedTask(millis()),
+	: TimedTask(millis(), RATE_FADER_FADE),
 	pin(_pin),
 	increment(_increment),
 	rate(_rate),
@@ -291,7 +291,7 @@ void Fader::run(uint32_t now)
 	}
 	
 	// Run again in the specified number of milliseconds.
-	incRunTime(rate);
+	setIntervalTime(rate);
 }
 
 /****************************************************************************************
@@ -408,7 +408,7 @@ private:
 // *** Note the passing of the _ptrAlarm to allow access to setAlarmCondition() and setRunnable()
 // ***
 PhotocellSensor::PhotocellSensor(uint8_t _pin, uint32_t _rate, LightLevelAlarm *_ptrAlarm, Debugger *_ptrDebugger)
-: TimedTask(millis()),
+: TimedTask(millis(), RATE_PHOTOCELL_READING),
 pin(_pin),
 rate(_rate),
 lightLevel(0),
@@ -457,7 +457,7 @@ void PhotocellSensor::run(uint32_t now)
 	ptrAlarm->setRunnable();
 	
 	// Run again in the specified number of milliseconds.
-	incRunTime(rate);
+	setIntervalTime(rate);
 }
 
 /**************************************************************************************

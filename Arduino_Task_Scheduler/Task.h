@@ -76,7 +76,7 @@ public:
      * Create a periodically executed task.
      * when - the system clock tick when the task should run, in milliseconds.
      */
-    inline TimedTask(uint32_t when) { runTime = when; }
+    inline TimedTask(uint32_t when, uint32_t interval) { runTime = when; intervalTime = interval;}
 
     /*
      * Can the task currently run?
@@ -91,10 +91,10 @@ public:
     inline void setRunTime(uint32_t when) { runTime = when; }
 
     /*
-     * Increment the system clock tick when the task can next run.
-     * inc - system clock increment, in milliseconds.
+     * set the system clock tick interval where the task should run at each interval.
+     * interval - system clock increment, in milliseconds.
      */
-    inline void incRunTime(uint32_t inc) { runTime += inc; }
+    inline void setIntervalTime(uint32_t interval) { intervalTime = interval; }
 
     /*
      * Get the system clock tick when the task can next run.
@@ -104,7 +104,8 @@ public:
 
 protected:
     
-    uint32_t runTime;   // The  system clock tick when the task can next run.
+    uint32_t runTime;   // The previous system clock tick.
+    uint32_t intervalTime; // The interval of system clock tick to decide task can next run.
 };
 
 #endif
