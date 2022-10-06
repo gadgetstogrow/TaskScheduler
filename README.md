@@ -8,4 +8,4 @@ As my Arduino projects became more complex I started to realize the delay() func
 For more information checkout my Hackster.io page: 
 https://www.hackster.io/GadgetsToGrow/
 
-The Original Task Scheduler code by Alan Burlison can be found here: http://bleaklow.com/2010/07/20/a_very_simple_arduino_task_manager.html
+The Original Task Scheduler code was written by Alan Burlison. The link is no longer available as of 10/6/2022.
